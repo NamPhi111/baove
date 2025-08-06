@@ -14,7 +14,7 @@
         <a href="<?=BASE_URL.'?action=category&category=3'?>" class="btn btn-outline-primary <?=$category==3 ? 'active':''?>">Giày</a>
         <a href="<?=BASE_URL.'?action=category&category=4'?>" class="btn btn-outline-primary <?=$category==4 ? 'active':''?>">Mũ</a>
     </div>
-</div>
+</div>fdxdssf
 <h2 class="mb-4">Danh sách sản phẩm</h2>
 <div class="row">
     <?php foreach($dataAll ?? $data as $v): ?>
