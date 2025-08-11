@@ -15,5 +15,20 @@ class User extends BaseModel{
         $stmt=$this->pdo->prepare($sql);
         $stmt->execute($data);
     }
+    public function getAll() {
+    $sql = "SELECT * FROM user";
+    $stmt = $this->pdo->prepare($sql);
+    $stmt->execute();
+    $user= $stmt->fetchAll();
+    return $user;
+}
+function delete($id){
+    $sql='DELETE FROM `user` WHERE id=:id';
+    $stmt=$this->pdo->prepare($sql);
+    $stmt->execute([':id'=>$id]);
+    
+
+}
+
 }
 ?>

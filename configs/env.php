@@ -1,6 +1,8 @@
 <?php
 
-define('BASE_URL',          'http://localhost:8080/duanmau/lab3/');
+define('BASE_URL',          'http://localhost:8080/duanmau/baove/');
+
+define('BASE_URL_ADDMIN',          'http://localhost:8080/duanmau/baove/?mode=addmin');
 
 define('PATH_ROOT',         __DIR__ . '/../');
 

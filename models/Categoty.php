@@ -4,8 +4,8 @@ class Categoty extends BaseModel{
         $sql="SELECT * from category";
         $stmt=$this->pdo->prepare($sql);
         $stmt->execute();
-        $products=$stmt->fetchAll();
-        return $products;
+        $category=$stmt->fetchAll();
+        return $category;
     }
 }
 ?>

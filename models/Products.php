@@ -33,8 +33,7 @@ class Products extends BaseModel{
         return $products;
     }
     function delete($id){
-        $sql="DELETE products
-        WHERE id=:id";
+        $sql="DELETE FROM `products` WHERE id=:id";
         $stmt=$this->pdo->prepare($sql);
         $stmt->execute([':id'=>$id]);
         return $stmt->rowCount();

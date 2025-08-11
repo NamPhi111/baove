@@ -17,28 +17,46 @@
 
     <!-- Nút mua -->
     <div class="text-center mt-5">
-        <button class="btn btn-primary btn-lg">Mua</button>
+            <a href="<?=BASE_URL .'?action=checkout&id='. $data['id'] ?>" class="btn btn-primary btn-lg">Mua</a>
+    </div>
+
+    <!-- Phần bình luận -->
+    <div class="comments-section mt-5">
+        <h3 class="mb-4">Bình luận</h3>
+
+        <!-- Form bình luận -->
+        <form method="POST" action="">
+            <div class="mb-3">
+                <label class="form-label">Tên của bạn</label>
+                <input type="text" name="username" class="form-control" placeholder="Nhập tên..." required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nội dung</label>
+                <textarea name="content" class="form-control" rows="3" placeholder="Nhập bình luận..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Gửi bình luận</button>
+        </form>
+
+        <!-- Danh sách bình luận -->
+        <div class="mt-4">
+            <div class="comment-item p-3 border rounded mb-3">
+                <strong>Híp:</strong>
+                <p>Sản phẩm rất đẹp 👍</p>
+            </div>
+            <div class="comment-item p-3 border rounded mb-3">
+                <strong>Nam:</strong>
+                <p>Giá hợp lý, giao hàng nhanh.</p>
+            </div>
+        </div>
     </div>
 </div>
 
-
 <style>
-    .main{
-        box-shadow: 0px 0px 15px gray;
-        padding:20px;
-        border-radius: 10px;
+    .comments-section {
+        border-top: 2px solid #ddd;
+        padding-top: 20px;
     }
-    .detail{
-        width: 80%;
-
+    .comment-item {
+        background: #f9f9f9;
     }
-    p{
-        font-size: 30px;
-    }
-    
-    .detail{
-        display: flex;
-        justify-content: space-between;
-    }
-
 </style>
