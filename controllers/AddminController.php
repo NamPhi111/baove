@@ -54,7 +54,7 @@
     function update(){
         if($_SERVER['REQUEST_METHOD']=='POST'){
             $data= $_POST+$_FILES;
-            $product=$this->product->get($_POST['ID']);
+            $product=$this->product->get($_POST['id']);
 
             if($data['thumbnail']['size']>0){
                 $data['thumbnail']=upload_file('product',$data['thumbnail']);
@@ -66,7 +66,6 @@
                 unlink($product['thumbnail']);
             }
         }
-        
         header('Location:' .BASE_URL_ADDMIN);
         exit;
     }
@@ -74,6 +73,27 @@
         $this->user->delete($_GET['id']);
         header('Location:' . BASE_URL_ADDMIN . '&action=user');
         exit;
+    }
+    function detail(){
+        if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        // Lấy sản phẩm theo id
+        $product = $this->product->get($id);
+
+        // Nếu sản phẩm không tồn tại thì chuyển hướng
+        if (!$product) {
+            header('Location: ' . BASE_URL_ADDMIN);
+            exit;
+        }
+         $v = $product;
+        // Load view hiển thị chi tiết
+        $view = 'addmin/detail';
+        require_once PATH_VIEW . 'main.php';
+    } else {
+        // Không có id thì quay về trang danh sách
+        header('Location: ' . BASE_URL_ADDMIN);
+        exit;
+    }
     }
     }
     

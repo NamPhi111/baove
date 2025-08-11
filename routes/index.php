@@ -7,8 +7,10 @@ if(isset($_GET['mode']) && $_GET['mode']=='addmin'){
         'add'         => (new AddminController)->add(),
         'delete'         => (new AddminController)->delete(),
         'edit'         => (new AddminController)->edit(),
+        'update'         => (new AddminController)->update(),
         'user'         => (new AddminController)->user(),
         'deleteUser'         => (new AddminController)->deleteUser(),
+        'detail'         => (new AddminController)->detail(),
 
     };
 }else{

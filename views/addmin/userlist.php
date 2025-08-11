@@ -25,7 +25,7 @@
             <th>ID</th>
             <th>Tên đăng nhập</th>
             <th>Email</th>
-            <th>Quyền</th>
+            <th>Ảnh</th>
             <th>Ngày tạo</th>
             <th>Hành động</th>
         </tr>
@@ -39,7 +39,7 @@
                     <td><?= $user['avatar_url'] ?></td>
                     <td><?= $user['date'] ?></td>
                     <td>
-                        <a href="?action=editUser&id=<?= $user['id'] ?>" class="btn btn-edit">Sửa</a>
+                        <!-- <a href="?action=editUser&id=<?= $user['id'] ?>" class="btn btn-edit">Sửa</a> -->
                         <a href="<?=BASE_URL_ADDMIN.'&action=deleteUser&id='. $user['id'] ?>" class="btn btn-delete" onclick="return confirm('Bạn có chắc muốn xóa tài khoản này?')">Xóa</a>
                     </td>
                 </tr>

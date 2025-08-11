@@ -101,7 +101,8 @@
         <div class="container mp-4">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <img src="public/images/logo_hip.png" alt="Logo Hip Store" class="nav-logo">
+                    <img src="assets/uploads/img_ao/loogoo.jpg" alt="Logo Hip Store" class="nav-logo">
+                    
                     <a class="nav-link text-uppercase" href="<?= BASE_URL ?>"><b>Trang Chủ</b></a>
                 </li>
                 <li class="nav-item">

@@ -44,7 +44,7 @@ class Products extends BaseModel{
         $stmt->execute($data);
     }
     function update($data){
-        $sql="UPDATE `products` SET `name`=':name',`thumbnail`=':thumbnail',`price`=':price',`description`='description',`category_id`=':category_id' WHERE id=:id";
+        $sql="UPDATE `products` SET `name`=:name,`thumbnail`=:thumbnail,`price`=:price,`description`=:description,`category_id`=:category_id WHERE id=:id";
         $stmt=$this->pdo->prepare($sql);
         $stmt->execute($data);
         return $stmt->rowCount();

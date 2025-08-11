@@ -21,14 +21,21 @@ class User extends BaseModel{
     $stmt->execute();
     $user= $stmt->fetchAll();
     return $user;
-}
-function delete($id){
-    $sql='DELETE FROM `user` WHERE id=:id';
-    $stmt=$this->pdo->prepare($sql);
-    $stmt->execute([':id'=>$id]);
-    
+    }
+    function delete($id){
+        $sql='DELETE FROM `user` WHERE id=:id';
+        $stmt=$this->pdo->prepare($sql);
+        $stmt->execute([':id'=>$id]);
+        
 
-}
+    }
+    function get($id){
+        $sql='SELECT * FROM `user` WHERE id=:id';
+        $stmt=$this->pdo->prepare($sql);
+        $stmt->execute([':id'=>$id]);
+        $products=$stmt->fetch();
+        return $products;
 
+    }
 }
 ?>
